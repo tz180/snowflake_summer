@@ -8,7 +8,7 @@ from urllib.error import URLError
 
 st.title('My Summer Internship')
 
-snowflake_logo = ascii("""          *                 *                              
+snowflake_logo = """\          *                 *                              
                            *********         *********                          
                           **********         **********                         
                           **********         **********                         
@@ -42,3 +42,5 @@ snowflake_logo = ascii("""          *                 *
                             *******           *******  """)
 
 st.write(snowflake_logo)
+
+print(r+snowflake_logo)
