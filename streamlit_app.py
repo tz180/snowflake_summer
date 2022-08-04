@@ -8,35 +8,34 @@ from urllib.error import URLError
 
 st.title('My Summer Internship')
 
-snowflake_logo = """MMMMMMMMMMMMMMMMMMWKkxdxkKWMMMMMMWKkxdxkKWMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMNkdddddkXMMMMMWXkdddddkNMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMXkdddddkXWMMMMWXkdddddkXWMMMMMMMMMMMMMMMMM
-MMMMMMWNK00KNWMMMMXkdddddkKWMMMMMXkdddddkXMMMMWNK00KNWMMMMMM
-MMMMMWKkdddxxO0XNWXkdddddkXWMMMMMXkdddddkXWNX0OxddddkKWMMMMM
-MMMMMW0xdddddddxk0OxdddddkXMMMMMWXkdddddxOOkxdddddddd0WMMMMM
-MMMMMWN0kxdddddddddddddddkXMMMMMWKkdddddddddddddddxk0NWMMMMM
-MMMMMMMWNX0OxxdddddddddddkXMMMMMMXkddddddddddddxO0XNWMMMMMMM
-MMWWWMMMMMMWNKOkxddddddddkXMMMMMWXkddddddddxkOKNWMMMMMMWWWMM
-X0OOO0XWMMMMMMWNK0kxdddddONMMMMMMNkdddddxk0XNWMMMMMWWXKOkO0X
-xdddddxk0XNWMMMMMMWXKOOO0NWMMWWWMWN0OOOKXWMMMMMMWNK0kxdddddx
-xddddddddxkOKXWMMMMMMMWWMMWX0OO0XWMMWWMMMMMMMWXKOkxddddddddx
-X0kxdddddddddxO0XNWMMMMMWXOxddddxOXWMMMMMWNX0Oxdddddddddxk0X
-MMWXKOkxddddddddxk0NMMWXOxdxkOOkxdxOXWMMN0kxddddddddxkOKXWWM
-MMMMMWX0kdddddddddx0WWKkddx0NWWN0xddkXWW0xdddddddddk0XWMMMMM
-MMMWNK0kxdddddddddkKWMNOxdxkKXXKOxdxONMWKkdddddddddxk0KNWMMM
-WXKOxddddddddddxO0XWMMMWKOxdxxxxdxOKWMMMWXKOkxdddddddddxOKXW
-OxdddddddddxkOKNWMMMMMMMMWKOxxdxOXWMMMMMMMMWNK0kxdddddddddxO
-xdddddddxk0XNWMMMMMWWNXNWWMWXXXXWMWNXXNNWMMMMMMWX0Oxxddddddx
-0xxdxkOKXWMMMMMMWNK0kxxxkKWMMMMMMN0kxxxkOKNWMMMMMMWNKOkxxxk0
-WNXXXNWMMMMMMWXKOkxddddddkXWMMMMMXkddddddxxO0XWMMMMMMWNXXXNW
-MMMMMMMMMWNX0kxddddddddddkKWMMMMMXkddddddddddxk0KNWMMMMMMMMM
-MMMMMMWNKOkxdddddddddddddkXMMMMMWXkdddddddddddddxkOKNWMMMMMM
-MMMMMWKkdddddddddxxxdddddkXWMMMMWXkdddddxxxdddddddddkKWMMMMM
-MMMMMNOddddddxkO0XKkdddddkXMMMMMWXkdddddkKX0Oxxdddddx0WMMMMM
-MMMMMWXOkxxk0KNWMMXkdddddkXWMMMMMXkdddddkXWMWNK0kkxk0NMMMMMM
-MMMMMMMWNNNWWMMMMMXkdddddkXWMMMMWXkdddddkXMMMMMMWNNNWMMMMMMM
-MMMMMMMMMMMMMMMMMMXkdddddkXMMMMMWXkdddddkXMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMNOxdddxONMMMMMMNOxdddxONMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMXOxdxOXWMMMMMMWXOxdxONWMMMMMMMMMMMMMMMMMM"""
+snowflake_logo = """
+@@@@@@@@@@@@@@@@@@@@B?77?G@@@@@@@@G?77?B@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@B!!!!!!P@@@@@@P!!!!!!B@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@P!7777!Y@@@@@@Y!7777!P@@@@@@@@@@@@@@@@@@@
+@@@@@@@@#GGB&@@@@@@P!7777!5@@@@@@5!7777!P@@@@@@&BGG#@@@@@@@@
+@@@@@@@J!!!!!?5B&@@G!7777!5@@@@@@5!7777!G@@&B5?!!!!!J@@@@@@@
+@@@@@@&!!!!7!!!!7JGY!7777!5@@@@@@5!7777!YP?!!!!!7!!!!&@@@@@@
+@@@@@@@&PJ7!!!!7!!!!77777!5@@@@@@5!77777!!!!7!!!!7JP&@@@@@@@
+@@@@@@@@@@@#5?!!!!7777777!5@@@@@@5!7777777!!!!?5#@@@@@@@@@@@
+@@&&&@@@@@@@@@&GY7!!!!77!!5@@@@@@Y!!77!!!!7YG&@@@@@@@@@&&&@@
+#J7!!?YB&@@@@@@@@@#PJ7!!!J&@@@@@@&?!!!7JP#@@@@@@@@@&BY?!!7J#
+7!!!!!!!!?P#@@@@@@@@@&&#&@@@@&&@@@@&&&@@@@@@@@@@#P?!!!!!!!!7
+#J7!!!!7!!!!7JG&@@@@@@@@@@@P7!!7P@@@@@@@@@@@&GJ7!!!!7!!!!7J#
+@@@#5?!!!777!!!!?YB@@@@@&P7!!??!!7P&@@@@@BY?!!!!777!!!?5#@@@
+@@@@@@&BY7!77777!!!?@@@5!!!7B@@&J!!!G@@@?!!!77777!7YB&@@@@@@
+@@@@@@&GJ7!77777!!!?@@@5!!!7#@@&J!!!P@@@?!!!!7777!7JG&@@@@@@
+@@&BY7!!!777!!!!7YG@@@@@&57!!??!!75&@@@@@BY?!!!!777!!!7YB&@@
+#J!!!!77!!!!7JP#@@@@@@@@@@&P7!!7P&@@@@@@@@@@&GJ7!!!!77!!!!J#
+7!!!!!!!!?5B&@@@@@@@@@&&@@@@@&&@@@@&&&@@@@@@@@@@#P?!!!!!!!!7
+&Y7!77YG&@@@@@@@@@&GJ7!!7Y&@@@@@@&J!!!7JG&@@@@@@@@@&BY?7!7Y&
+@@@&&@@@@@@@@@&BY?!!!!!!!!Y@@@@@@Y!!77!!!!7YB&@@@@@@@@@&&@@@
+@@@@@@@@@@@#P?!!!!!777777!5@@@@@@5!7777777!!!!?5#@@@@@@@@@@@
+@@@@@@@&GJ7!!!!7!!!!77777!5@@@@@@5!77777!!!!7!!!!7JG&@@@@@@@
+@@@@@@&!!!!77!!!!?PY!7777!5@@@@@@5!7777!YP?!!!!77!!!7&@@@@@@
+@@@@@@&?!!!!!7YB&@@G!7777!5@@@@@@5!7777!G@@&BY?!!!!!J@@@@@@@
+@@@@@@@@BPPG&@@@@@@P!7777!5@@@@@@5!7777!P@@@@@@&GPG#@@@@@@@@
+@@@@@@@@@@@@@@@@@@@P!7777!Y@@@@@@Y!7777!P@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@B!!77!!P@@@@@@P!!77!!B@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@G?77?P@@@@@@@@P?77?G@@@@@@@@@@@@@@@@@@@@"""
 
 st.text(snowflake_logo)
