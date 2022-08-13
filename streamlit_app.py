@@ -39,3 +39,26 @@ snowflake_logo = """
 @@@@@@@@@@@@@@@@@@@@G?77?P@@@@@@@@P?77?G@@@@@@@@@@@@@@@@@@@@"""
 
 st.text(snowflake_logo)
+
+#ideas
+
+st.header('Meetings List w/ Filter')
+
+my_meeting_list = pd.read_csv("Snow_Meetings_csv.csv")
+
+my_meeting_list = my_meeting_list.set_index('Date')
+
+# Let's put a pick list here so they can pick the fruit they want to include 
+meetings_selected = st.multiselect("When Did you Meet with Tyler:", list(my_meeting_list.index.drop_duplicates()))
+meetings_to_show = my_meeting_list.loc[meetings_selected]
+
+# Display the table on the page.
+st.dataframe(meetings_to_show)
+
+col1, col2, col3 = st.columns(3)
+
+trading_gains = trades_to_show['Amount'].sum()
+
+col1.metric("# of Trades", trades_to_show.shape[0], "0")
+col2.metric("# of Columns", trades_to_show.shape[1], "0")
+col3.metric("Total Gain / Loss", trading_gains, "0")
