@@ -65,10 +65,10 @@ my_hours_list = pd.read_csv("Snow_Meeting_Hours.csv")
 
 st.header('Meetings by Week')
 
-st.dataframe(my_hours_list, 500)
-
 my_hours_list = my_hours_list.set_index('Week')
 
 st.dataframe(my_hours_list, 500)
+
+st.line_chart(my_hours_list)
 
 st.bar_chart(my_hours_list, x='Week', y='Hours')
