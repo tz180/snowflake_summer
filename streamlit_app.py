@@ -53,7 +53,7 @@ meetings_selected = st.multiselect("When Did You Meet With Tyler?", list(my_meet
 meetings_to_show = my_meeting_list.loc[meetings_selected]
 
 # Display the table on the page.
-st.dataframe(meetings_to_show)
+st.dataframe(meetings_to_show, 200)
 
 col1, col2, col3 = st.columns(3)
 
