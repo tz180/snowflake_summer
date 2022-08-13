@@ -67,8 +67,6 @@ st.header('Meetings by Week')
 
 my_hours_list = my_hours_list.set_index('Week')
 
-st.dataframe(my_hours_list, 500)
-
-st.line_chart(my_hours_list)
+st.line_chart(my_hours_list, x='Week', y='Hours')
 
 st.bar_chart(my_hours_list, x='Week', y='Hours')
