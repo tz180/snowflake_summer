@@ -57,6 +57,12 @@ st.dataframe(meetings_to_show, 500)
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric("# of Meetings", meetings_to_show.shape[0], "0")
+col1.metric("# of Meetings", meetings_to_show.sum(), "0")
 col2.metric("# of Columns", meetings_to_show.shape[1], "0")
 col3.metric("Total Gain / Loss", trading_gains, "0")
+
+my_hours_list = pd.read_csv("Snow_Meeting_Hours.csv")
+
+st.header('Meetings by Week')
+
+st.bar_chart(my_hours_list)
