@@ -46,10 +46,10 @@ st.header('Meetings List w/ Filter')
 
 my_meeting_list = pd.read_csv("Snow_Meetings_csv.csv")
 
-my_meeting_list = my_meeting_list.set_index('Date')
+my_meeting_list = my_meeting_list.set_index('Snowflake Employee')
 
 # Let's put a pick list here so they can pick the fruit they want to include 
-meetings_selected = st.multiselect("When Did you Meet with Tyler:", list(my_meeting_list.index.drop_duplicates()))
+meetings_selected = st.multiselect("When Did You Meet With Tyler?", list(my_meeting_list.index.drop_duplicates()))
 meetings_to_show = my_meeting_list.loc[meetings_selected]
 
 # Display the table on the page.
