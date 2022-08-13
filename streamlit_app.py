@@ -53,12 +53,10 @@ meetings_selected = st.multiselect("When Did You Meet With Tyler?", list(my_meet
 meetings_to_show = my_meeting_list.loc[meetings_selected]
 
 # Display the table on the page.
-st.dataframe(meetings_to_show, 200)
+st.dataframe(meetings_to_show, 500)
 
 col1, col2, col3 = st.columns(3)
 
-trading_gains = trades_to_show['Amount'].sum()
-
-col1.metric("# of Trades", trades_to_show.shape[0], "0")
-col2.metric("# of Columns", trades_to_show.shape[1], "0")
+col1.metric("# of Meetings", meetings_to_show.shape[0], "0")
+col2.metric("# of Columns", meetings_to_show.shape[1], "0")
 col3.metric("Total Gain / Loss", trading_gains, "0")
