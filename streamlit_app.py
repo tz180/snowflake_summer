@@ -65,6 +65,8 @@ my_hours_list = pd.read_csv("Snow_Meeting_Hours.csv")
 
 st.header('Meeting Hours by Week')
 
+my_hours_list["Week"] = pd.to_datetime(my_hours_list["Week"])
+my_hours_list.sort_values(by='Week', inplace=True)
 my_hours_list = my_hours_list.set_index('Week')
 
 st.line_chart(my_hours_list)
