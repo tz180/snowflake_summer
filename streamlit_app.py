@@ -83,6 +83,8 @@ my_meetings_list = pd.read_csv("Meeting_Numbers.csv")
 
 st.header('Meetings by Week')
 
+my_meetings_list["Week"] = pd.to_datetime(my_meetings_list["Week"])
+my_meetings_list.sort_values(by='Week', inplace=True)
 my_meetings_list = my_meetings_list.set_index('Week')
 
 st.bar_chart(my_meetings_list)
