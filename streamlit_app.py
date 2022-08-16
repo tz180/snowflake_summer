@@ -69,6 +69,14 @@ my_hours_list["Week"] = pd.to_datetime(my_hours_list["Week"])
 my_hours_list.sort_values(by='Week', inplace=True)
 my_hours_list = my_hours_list.set_index('Week')
 
+fmt = "%d-%m-%Y"
+styler = my_hours_list.style.format(
+    {
+        "Week": lambda t: t.strftime(fmt),
+    }
+)
+st.table(styler)
+
 st.dataframe(my_hours_list)
 
 st.line_chart(my_hours_list)
