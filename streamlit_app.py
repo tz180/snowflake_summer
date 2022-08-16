@@ -67,6 +67,7 @@ st.header('Meeting Hours by Week')
 
 my_hours_list["Week"] = pd.to_datetime(my_hours_list["Week"])
 my_hours_list.sort_values(by='Week', inplace=True)
+my_hours_list.dropna(how='all', axis=1, inplace=True)
 fmt = "%mmm-%YY"
 styler = my_hours_list.style.format(
     {
