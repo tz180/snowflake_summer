@@ -75,9 +75,9 @@ styler = my_hours_list.style.format(
         "Week": lambda t: t.strftime(fmt),
     }
 )
-my_hours_list = my_hours_list.set_index('Week')
+#my_hours_list = my_hours_list.set_index('Week')
 
-st.dataframe(my_hours_list)
+#st.dataframe(my_hours_list)
 
 fig = px.line(my_hours_list, x="Week", y="Meeting Hours", color="Meeting Hours")
 st.plotly_chart(fig)
