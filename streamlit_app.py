@@ -57,16 +57,22 @@ st.dataframe(meetings_to_show, 500)
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric("# of Meetings", meetings_to_show.shape[0], "0")
-col2.metric("# of Columns", meetings_to_show.shape[1], "0")
-#col3.metric("Total Gain / Loss", trading_gains, "0")
+col1.metric("# of 1:1's", "35", "3")
+col2.metric("# of Meetings", "138", "13")
+col3.metric("# of times I said Feature Engineering", "10,000", "400")
 
 my_hours_list = pd.read_csv("Snow_Meeting_Hours.csv")
 
-st.header('Meetings by Week')
+st.header('Meeting Hours by Week')
 
 my_hours_list = my_hours_list.set_index('Week')
 
 st.line_chart(my_hours_list)
 
-st.bar_chart(my_hours_list, x='Week', y='Hours')
+my_meetings_list = pd.read_csv("Meeting_Numbers.csv")
+
+st.header('Meetings by Week')
+
+my_meetings_list = my_hours_list.set_index('Week')
+
+st.bar_chart(my_meetings_list)
