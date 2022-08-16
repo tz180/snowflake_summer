@@ -67,14 +67,13 @@ st.header('Meeting Hours by Week')
 
 my_hours_list["Week"] = pd.to_datetime(my_hours_list["Week"])
 my_hours_list.sort_values(by='Week', inplace=True)
-my_hours_list = my_hours_list.set_index('Week')
-
 fmt = "%mmm-%YY"
 styler = my_hours_list.style.format(
     {
         "Week": lambda t: t.strftime(fmt),
     }
 )
+my_hours_list = my_hours_list.set_index('Week')
 
 st.dataframe(my_hours_list)
 
