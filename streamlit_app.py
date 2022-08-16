@@ -69,6 +69,8 @@ my_hours_list["Week"] = pd.to_datetime(my_hours_list["Week"])
 my_hours_list.sort_values(by='Week', inplace=True)
 my_hours_list = my_hours_list.set_index('Week')
 
+st.dataframe(my_hours_list)
+
 st.line_chart(my_hours_list)
 
 my_meetings_list = pd.read_csv("Meeting_Numbers.csv")
