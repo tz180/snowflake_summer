@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import requests
 from urllib.error import URLError
+import plotly.express as px
 
 st.title('My Summer Internship')
 
@@ -78,8 +79,8 @@ my_hours_list = my_hours_list.set_index('Week')
 
 st.dataframe(my_hours_list)
 
-st.line_chart(my_hours_list)
-
+fig = px.line(my_hours_list, x="Date", y="Meeting Hours")
+fig.show()
 my_meetings_list = pd.read_csv("Meeting_Numbers.csv")
 
 st.header('Meetings by Week')
