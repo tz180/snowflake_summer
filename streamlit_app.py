@@ -73,6 +73,6 @@ my_meetings_list = pd.read_csv("Meeting_Numbers.csv")
 
 st.header('Meetings by Week')
 
-my_meetings_list = my_hours_list.set_index('Week')
+my_meetings_list = my_meetings_list.set_index('Week')
 
 st.bar_chart(my_meetings_list)
