@@ -79,7 +79,7 @@ my_hours_list = my_hours_list.set_index('Week')
 
 st.dataframe(my_hours_list)
 
-fig = px.line(my_hours_list, x="Date", y="Meeting Hours", color="Meeting Hours")
+fig = px.line(my_hours_list, x="Week", y="Meeting Hours", color="Meeting Hours")
 st.plotly_chart(fig)
 my_meetings_list = pd.read_csv("Meeting_Numbers.csv")
 
