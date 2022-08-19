@@ -59,7 +59,7 @@ st.dataframe(meetings_to_show, 500)
 col1, col2, col3 = st.columns(3)
 
 col1.metric("# of 1:1's", "35", "3")
-col2.metric("# of Meetings", "138", "13")
+col2.metric("# of Meetings", "138", "14")
 col3.metric("# of times I said Feature Engineering", "10,000", "400")
 
 my_hours_list = pd.read_csv("Snow_Meeting_Hours.csv")
